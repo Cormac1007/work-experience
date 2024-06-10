@@ -18,38 +18,23 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { useQuasar } from 'quasar';
+import { ref } from "vue";
+import { useQuasar } from "quasar";
 
-const url = ref('');
+const url = ref("");
 const $q = useQuasar();
 
 const handleSubmit = () => {
-  console.log('test')
-  if (url.value && isValidURL(url.value)) {
-    $q.notify({
-      message: URL submitted: ${url.value},
-      color: 'green',
-      position: 'top'
-    });
-  } else {
-    $q.notify({
-      message: 'Please enter a valid HTTPS URL',
-      color: 'red',
-      position: 'top'
-    });
-  }
+  console.log("test");
 };
 
 const isValidURL = (string) => {
-  const pattern = new RegExp(
-    '^https:\\/\\/'
-  );
+  const pattern = new RegExp("^https:\\/\\/");
   return !!pattern.test(string);
 };
 
 defineOptions({
-  name: 'IndexPage'
+  name: "IndexPage",
 });
 </script>
 
