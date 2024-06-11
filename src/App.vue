@@ -2,8 +2,10 @@
   <router-view />
 </template>
 
-<script setup>
-defineOptions({
-  name: 'App'
-});
+<script>
+export default {
+  name: "App",
+};
 </script>
+
+<style></style>
